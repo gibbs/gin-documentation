@@ -1,0 +1,60 @@
+site_name: Gin
+repo_url: https://github.com/gibbs/gin
+repo_name: gin
+
+theme:
+  language: en
+  direction: ltr
+  name: material
+  features:
+    - tabs
+    - navigation.top
+    - navigation.expand
+    - navigation.tabs
+    - search.highlight
+  palette:
+    - scheme: slate
+      primary: light blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    - scheme: default
+      primary: green
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  icon:
+    logo: material/layers
+  font:
+    text: Roboto
+    code: Iosevka
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.tabbed
+  - pymdownx.snippets:
+      base_path: ./gin-module/
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
+      auto_title: false
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - js/tables.js
+
+extra_css:
+  - stylesheets/override.css
